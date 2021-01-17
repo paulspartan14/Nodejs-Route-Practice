@@ -2,42 +2,65 @@
 
 Esta api realiza unas cuantas validaciones hacia una peticion POST en una ruta especifica.
 
+```
+http://localhost:3300/api/students POST GET
+```
+
+```
+{
+    "name": "Paul",
+    "lastName": "Mena",
+    "Age": "23",
+    "semester": "8",
+    "career": "sistemas computacionales"
+}
+```
+
 ### Prerequisites :clipboard:
 
-Para instalar este proyecto, es necesario descargar Docker y hacer un pull del contenedor.
+Para correr este proyecto, es necesario instalar las dependencias y correr los siguientes comandos.
 
 ```
-Give examples
+npm install
+npm start
 ```
 
-### Installing :arrow_down:
+## Container :package:
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+Para poder correr el proyecto directamente desde el contenedor creado localmente puedes ejecutar:
 
 ```
-Give the example
+docker build -t api-students:v1.0 . 
+docker run -d -p 3300:3300 --name api-students api-students:v1.0
 ```
 
-And repeat
+Para poder crear tu imagen de docker y publicarla, primero ingresa un 
+```
+docker login
+```
+
+Luego necesitas agregarle un tag a tu imagen creada
 
 ```
-until finished
+docker tag api-students:v1.0 paulspartan/api-students:v1.0
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+Una vinculado el tag del repositorio con la imagen actual ejecutamos:
 
+```
+docker push paulspartan/api-students:v1.0
+```
+Para ejecutar el contenedor directamente desde la imagen almacenada en docker hub, ejecutar:
 
-## Deployment :package:
-
-Add additional notes about how to deploy this on a live system
+```
+docker run -d -p 3300:3300 -n api-students paulspartan/api-students:v1.0
+```
 
 ## Built With :hammer_and_wrench:
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Node](https://nodejs.org/es/) - The server used
+* [Docker](https://www.docker.com/) - Containers used
+
 
 ## Contributing :family_man_man_boy:
 
@@ -47,19 +70,9 @@ Please read [CONTRIBUTING.md](https://www.aaaimx.org/cod) for details on our cod
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
-## Future work :rocket:
-
 ## Contributors :family_man_man_boy:
 
 - **Paul Mena** - _Initial work_ - [@paulspartan14](https://github.com/paulspartan14)
-
-## Credits :star:
-
-- **A template to make good README.md** - _Base template_ - [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-
-## References :link:
-
-1. 
 
 ## License :page_facing_up:
 
