@@ -45,7 +45,7 @@ Luego necesitas agregarle un tag a tu imagen creada
 docker tag api-students:v1.0 paulspartan/api-students:v1.0
 ```
 
-Una vinculado el tag del repositorio con la imagen actual ejecutamos:
+Una vez vinculado el tag del repositorio con la imagen actual ejecutamos:
 
 ```
 docker push paulspartan/api-students:v1.0
