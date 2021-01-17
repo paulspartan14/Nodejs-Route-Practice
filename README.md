@@ -1,14 +1,10 @@
-# Name Project
+# API validator
 
-One Paragraph of project description goes here. This is a template for organization repositories, set your own stuff.
-
-## Getting Started :arrow_forward:
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Esta api realiza unas cuantas validaciones hacia una peticion POST en una ruta especifica.
 
 ### Prerequisites :clipboard:
 
-What things you need to install the software and how to install them
+Para instalar este proyecto, es necesario descargar Docker y hacer un pull del contenedor.
 
 ```
 Give examples
