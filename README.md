@@ -18,7 +18,7 @@ http://localhost:3300/api/students POST GET
 
 ### Prerequisites :clipboard:
 
-Para correr este proyecto, es necesario instalar las dependencias y correr los siguientes comandos.
+Para correr este proyecto, es necesario instalar las dependencias, crear el .env con las variables de entorno y correr los siguientes comandos.
 
 ```
 npm install
@@ -27,11 +27,12 @@ npm start
 
 ## Container :package:
 
-Para poder correr el proyecto directamente desde el contenedor creado localmente puedes ejecutar:
+Para poder correr el proyecto directamente desde el contenedor creado localmente puedes ejecutar (no olvides crear el .env y sustituir ${PORT}
+por el puerto que utilizarás)
 
 ```
 docker build -t api-students:v1.0 . 
-docker run -d -p 3300:3300 --name api-students api-students:v1.0
+docker run -d -p 3300:${PORT} --name api-students api-students:v1.0
 ```
 
 Para poder crear tu imagen de docker y publicarla, primero ingresa un 

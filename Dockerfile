@@ -15,5 +15,5 @@ RUN npm install
 # Bundle app source
 COPY . .
 
-EXPOSE 3300
+EXPOSE ${PORT}
 CMD ["node", "./src/server.js"]
