@@ -27,7 +27,7 @@ npm start
 
 ## Container :package:
 
-to run the project directly from the container created locally you can run: (don't forget to create the .env and replace $ {PORT}
+to run the project directly from the container created locally you can run: (don't forget to create the .env archive and replace $ {PORT}
 by the port you will use)
 
 ```
