@@ -1,6 +1,6 @@
 # API validator
 
-Esta api realiza unas cuantas validaciones hacia una peticion POST en una ruta especifica.
+This api performs a few validations towards a POST request on a specific path.
 
 ```
 http://localhost:3300/api/students POST GET
@@ -18,7 +18,7 @@ http://localhost:3300/api/students POST GET
 
 ### Prerequisites :clipboard:
 
-Para correr este proyecto, es necesario instalar las dependencias, crear el .env con las variables de entorno y correr los siguientes comandos.
+To run this project, it is necessary to install the dependencies, create the .env with the environment variables and run the following commands.
 
 ```
 npm install
@@ -27,31 +27,31 @@ npm start
 
 ## Container :package:
 
-Para poder correr el proyecto directamente desde el contenedor creado localmente puedes ejecutar (no olvides crear el .env y sustituir ${PORT}
-por el puerto que utilizarás)
+to run the project directly from the container created locally you can run: (don't forget to create the .env and replace $ {PORT}
+by the port you will use)
 
 ```
 docker build -t api-students:v1.0 . 
 docker run -d -p 3300:${PORT} --name api-students api-students:v1.0
 ```
 
-Para poder crear tu imagen de docker y publicarla, primero ingresa un 
+create your docker image and publish it, first run:
 ```
 docker login
 ```
 
-Luego necesitas agregarle un tag a tu imagen creada
+Next, you need to add a tag to your created image:
 
 ```
 docker tag api-students:v1.0 paulspartan/api-students:v1.0
 ```
 
-Una vez vinculado el tag del repositorio con la imagen actual ejecutamos:
+Once the repository tag is linked with the current image, we execute:
 
 ```
 docker push paulspartan/api-students:v1.0
 ```
-Para ejecutar el contenedor directamente desde la imagen almacenada en docker hub, ejecutar:
+Run container directly from image stored in docker hub
 
 ```
 docker run -d -p 3300:3300 -n api-students paulspartan/api-students:v1.0
