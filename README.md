@@ -22,7 +22,7 @@ To run this project, it is necessary to install the dependencies, create the .en
 
 ```
 npm install
-npm start
+npm run dev
 ```
 
 ## Container :package:
