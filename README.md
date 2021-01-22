@@ -54,7 +54,7 @@ docker push paulspartan/api-students:v1.0
 Run container directly from image stored in docker hub
 
 ```
-docker run -d -p 3300:3300 -n api-students paulspartan/api-students:v1.0
+docker run -d -p 3300:3300 --name api-students paulspartan/api-students:v1.0
 ```
 
 ## Built With :hammer_and_wrench:
