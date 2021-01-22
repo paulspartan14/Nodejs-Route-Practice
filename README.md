@@ -25,7 +25,7 @@ npm install
 npm run dev
 ```
 
-or producction:
+or production:
 
 ```
 npm install
