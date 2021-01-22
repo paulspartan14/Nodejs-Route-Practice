@@ -25,6 +25,13 @@ npm install
 npm run dev
 ```
 
+or producction:
+
+```
+npm install
+npm start
+```
+
 ## Container :package:
 
 to run the project directly from the container created locally you can run: (don't forget to create the .env archive and replace 'PORT='
