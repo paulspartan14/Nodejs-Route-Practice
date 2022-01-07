@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  api:
+    container_name: api-students
+    build: .
+    env_file: ./.env
+    ports: 
+      - "${PORT}:${PORT}"
+    
